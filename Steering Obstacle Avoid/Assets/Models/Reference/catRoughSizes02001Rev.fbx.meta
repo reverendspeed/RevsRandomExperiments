@@ -1,0 +1,278 @@
+fileFormatVersion: 2
+guid: 2c996f8e7d7831c4ea2929b353d043e1
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Belly
+    100004: catRoughSize02Rev
+    100006: //RootNode
+    100008: Head
+    100010: LegBack01.L
+    100012: LegBack01.R
+    100014: LegBack02.L
+    100016: LegBack02.R
+    100018: LegBack03.L
+    100020: LegBack03.R
+    100022: LegFront01.L
+    100024: LegFront01.R
+    100026: LegFront02.L
+    100028: LegFront02.R
+    100030: LegFront03.L
+    100032: LegFront03.R
+    100034: Neck
+    100036: Pelvis
+    100038: Ribs
+    100040: Root
+    100042: Spine01
+    100044: Spine02
+    100046: Tail01
+    100048: Tail02
+    100050: Tail03
+    100052: Tail04
+    400000: Armature
+    400002: Belly
+    400004: catRoughSize02Rev
+    400006: //RootNode
+    400008: Head
+    400010: LegBack01.L
+    400012: LegBack01.R
+    400014: LegBack02.L
+    400016: LegBack02.R
+    400018: LegBack03.L
+    400020: LegBack03.R
+    400022: LegFront01.L
+    400024: LegFront01.R
+    400026: LegFront02.L
+    400028: LegFront02.R
+    400030: LegFront03.L
+    400032: LegFront03.R
+    400034: Neck
+    400036: Pelvis
+    400038: Ribs
+    400040: Root
+    400042: Spine01
+    400044: Spine02
+    400046: Tail01
+    400048: Tail02
+    400050: Tail03
+    400052: Tail04
+    4300000: catRoughSize02Rev
+    7400000: Armature|moveWalkForward
+    7400002: Armature|stillStand01
+    9500000: //RootNode
+    13700000: catRoughSize02Rev
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|moveWalkForward
+      takeName: Armature|moveWalkForward
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Pelvis
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.L
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.L/LegBack02.L
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.L/LegBack02.L/LegBack03.L
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.R
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.R/LegBack02.R
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.R/LegBack02.R/LegBack03.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.L
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.L/LegFront02.L
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.L/LegFront02.L/LegFront03.L
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.R/LegFront02.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.R/LegFront02.R/LegFront03.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/Neck
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/Neck/Head
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01/Tail02
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01/Tail02/Tail03
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01/Tail02/Tail03/Tail04
+        weight: 1
+      - path: Armature/Root/Ribs
+        weight: 1
+      - path: catRoughSize02Rev
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: Armature|stillStand01
+      takeName: Armature|stillStand01
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/Root
+        weight: 1
+      - path: Armature/Root/Belly
+        weight: 1
+      - path: Armature/Root/Pelvis
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.L
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.L/LegBack02.L
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.L/LegBack02.L/LegBack03.L
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.R
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.R/LegBack02.R
+        weight: 1
+      - path: Armature/Root/Pelvis/LegBack01.R/LegBack02.R/LegBack03.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.L
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.L/LegFront02.L
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.L/LegFront02.L/LegFront03.L
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.R/LegFront02.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/LegFront01.R/LegFront02.R/LegFront03.R
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/Neck
+        weight: 1
+      - path: Armature/Root/Pelvis/Spine02/Spine01/Neck/Head
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01/Tail02
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01/Tail02/Tail03
+        weight: 1
+      - path: Armature/Root/Pelvis/Tail01/Tail02/Tail03/Tail04
+        weight: 1
+      - path: Armature/Root/Ribs
+        weight: 1
+      - path: catRoughSize02Rev
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: Root
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
