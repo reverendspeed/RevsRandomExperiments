@@ -3,27 +3,33 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-	private	Camera	cam;
+	public	float		speed 		= 10.0F;
+	public	float		lifeTime 	= 2.0F;
+	
+	private	Rigidbody	rb;
 
-	// Use this for initialization
-	void Start () {
-		cam = GameObject.FindGameObjectWithTag ("MainCamera").GetComponent<Camera> ();
+	void Awake () {
+		rb = GetComponent<Rigidbody> ();
 	}
 
 	void OnEnable () {
-		Invoke ("Destroy", 1.0F);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		transform.rotation = Quaternion.LookRotation (transform.position - cam.transform.position);
+		Invoke ("Destroy", lifeTime);
 	}
 
-	void Destroy () {
+	void FixedUpdate () {
+		rb.MovePosition (rb.position + transform.forward * speed * Time.deltaTime);
+	}
+
+	void Deactivate () {
 		gameObject.SetActive (false);
 	}
 
 	void OnDisable () {
 		CancelInvoke ();
+	}
+
+	void OnCollisionEnter () {
+		Debug.Log ("Bullet hit something!");
+		Deactivate ();
 	}
 }
