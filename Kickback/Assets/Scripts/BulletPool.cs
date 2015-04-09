@@ -11,6 +11,7 @@ public class BulletPool : MonoBehaviour {
 	public	Material[] 			matArray;
 	public	int					totalBulletCount = 20;
 
+
 	void Awake () {
 		if (instance == null) {
 			instance = this;
@@ -23,6 +24,7 @@ public class BulletPool : MonoBehaviour {
 		for (int i = 0; i < totalBulletCount; i++) {
 			InitialiseBullet ();
 		}
+
 	}
 
 	// Use this for initialization
@@ -42,21 +44,23 @@ public class BulletPool : MonoBehaviour {
 		tempBullet.gameObject.SetActive (false);
 	}
 
-	public	void	GetBullet (Vector3 position, Quaternion rotation, int	materialType){
+	public	void	GetBullet (Vector3 position, Quaternion rotation, int	materialType, Collider collidr){
 		for (int i = 0; i < pool.Count; i++) {
 			if(!pool[i].isActiveAndEnabled){
-				SetupBullet(pool[i], position, rotation, materialType);
+				SetupBullet(pool[i], position, rotation, materialType, collidr);
 				return;
 			}
-			totalBulletCount++;
-			InitialiseBullet();
-			SetupBullet(pool[pool.Count -1], position, rotation, materialType);
 		}
+		totalBulletCount++;
+		InitialiseBullet();
+		SetupBullet(pool[pool.Count -1], position, rotation, materialType, collidr);
 	}
 
-	void SetupBullet(PlasmaBall currentBullet, Vector3 position, Quaternion rotation, int materialType){
+	void SetupBullet(PlasmaBall currentBullet, Vector3 position, Quaternion rotation, int materialType, Collider collidr){
 		currentBullet.gameObject.transform.position = position;
 		currentBullet.gameObject.transform.rotation = rotation;
 		currentBullet.meshRenderer.materials[0] = matArray[materialType];
+		currentBullet.gameObject.SetActive (true);
+		Physics.IgnoreCollision (currentBullet.collidr, collidr);
 	}
 }

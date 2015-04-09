@@ -26,25 +26,39 @@ public class CharacterMotor : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		moveInput = new Vector3 (Input.GetAxis ("Horizontal"), 0.0F, Input.GetAxis ("Vertical"));
-		jumpInput = Input.GetButtonDown ("Jump");
+		if (Input.GetButtonDown ("Jump")) {
+			if (IsGrounded()){
+				jumpInput = true;
+			}else{
+				jumpInput = false;
+			}
+		}
 	}
 
 	void FixedUpdate () {
 		if (Mathf.Abs(moveInput.x) > float.Epsilon || Mathf.Abs(moveInput.z) > float.Epsilon) {
 //			rb.MovePosition (rb.position + moveInput * Time.deltaTime * moveSpeed); // Get rid of time.deltatime
-			rb.MovePosition (rb.position + moveInput * moveSpeed); // Get rid of time.deltatime
+			rb.MovePosition (rb.position + moveInput * Time.deltaTime * moveSpeed); // Get rid of time.deltatime
 			rb.MoveRotation (Quaternion.LookRotation(moveInput, Vector3.up));
 		}
 
 		if (jumpInput) {
-			if(Physics.Raycast(transform.position - Vector3.up, -Vector3.up, groundRayLen,playerMask)){ 
-				Debug.DrawRay(transform.position - Vector3.up, -Vector3.up, Color.green);
-				rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
-				jumpInput = false;
-			}else{
-				Debug.DrawRay(transform.position - (Vector3.up * 0.5F), -Vector3.up, Color.red);
-			}
+			rb.AddForce(jumpForce * Vector3.up, ForceMode.Impulse);
+			jumpInput = false;
 		}
 	}
 
+	bool IsGrounded () {
+		if(Physics.Raycast(transform.position, Vector3.down, groundRayLen,playerMask)){ 
+			Debug.DrawRay(transform.position, Vector3.down * groundRayLen, Color.green);
+			return true;
+		}else{
+			Debug.DrawRay(transform.position, Vector3.down * groundRayLen, Color.red);
+			return false;
+		}
+	}
+
+	public	void	KickBack (float	force){
+		rb.MovePosition (rb.position + transform.forward * -force * Time.deltaTime);  	
+	}
 }

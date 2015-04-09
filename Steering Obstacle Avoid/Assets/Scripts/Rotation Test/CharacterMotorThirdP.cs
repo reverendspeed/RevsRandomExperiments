@@ -18,7 +18,7 @@ public class CharacterMotorThirdP : MonoBehaviour {
 	public	Vector3			lastFramesVelocity;
 
 	void Start () {
-		rb 					= GetComponent<Rigidbody> ();
+		rb 			= GetComponent<Rigidbody> ();
 		trailingPlayerFeet 	= transform.position + (Vector3.up * 0.1F); // Start forgiveness trail at player pos
 	}
 

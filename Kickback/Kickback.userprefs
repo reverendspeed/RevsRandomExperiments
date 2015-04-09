@@ -1,10 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\BulletPool.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CharacterGun3rdP.cs">
     <Files>
-      <File FileName="Assets\Scripts\BulletPool.cs" Line="60" Column="68" />
-      <File FileName="Assets\Scripts\CharacterMotor.cs" Line="46" Column="5" />
-      <File FileName="Assets\Scripts\PlasmaBall.cs" Line="11" Column="8" />
+      <File FileName="Assets\Scripts\CharacterMotor.cs" Line="62" Column="51" />
+      <File FileName="..\Steering Obstacle Avoid\Assets\Scripts\Rotation Test\CharacterMotorThirdP.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlasmaBall.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\BulletPool.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\CharacterGun3rdP.cs" Line="51" Column="36" />
+      <File FileName="Assets\Scripts\BulletHit.cs" Line="38" Column="35" />
+      <File FileName="Assets\Scripts\CabinetObliqueCam.cs" Line="9" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -86,8 +86,6 @@
       <Project>{82B088B6-A850-426D-F0AE-CAFEC7E372BB}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-UnityScript-firstpass.unityproj">
       <Project>{DF4634F0-10DE-96EB-B70F-033911B43061}</Project>      <Name>Assembly-UnityScript-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{FA264398-C1DB-575D-00A9-E3886D9A308B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
