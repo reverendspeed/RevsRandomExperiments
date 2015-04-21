@@ -37,9 +37,12 @@ public class ObjectPoolBasic : MonoBehaviour {
 			}
 		}
 		Instantiate();
-		spawnedBullets.FindLast ().transform.position = bulletPosition;
-		spawnedBullets.FindLast ().transform.rotation = bulletRotation;
-		spawnedBullets.FindLast ().SetActive (true);
+		// Commented out below just to get game temp working.
+//		spawnedBullets.FindLast ().transform.position = bulletPosition;
+//		spawnedBullets.FindLast ().transform.rotation = bulletRotation;
+//		spawnedBullets.FindLast ().SetActive (true);
+
+
 //		if (populateAmount > spawnedBullets.Count){
 //			Debug.LogWarning("Populate amount per SpawnLoop exceeds humans.Count! Setting populateAmount to humans.Count -1");
 //			populateAmount = spawnedBullets.Count - 1;

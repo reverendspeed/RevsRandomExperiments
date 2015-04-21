@@ -4,37 +4,36 @@ using System.Collections;
 public class BulletHit : MonoBehaviour {
 
 	public	Material[] 	materials;
+	public	float[]		bulletForce = new float[2] {0.0F, 1.0F};
 	public	float		flashPeriod = 0.1F;
+	public	float		hitTimeScale = 1.0F;
+
+	private	Rigidbody	rb;
 
 	private	MeshRenderer	meshRend;
 
 	void Awake () {
 		meshRend = GetComponent<MeshRenderer> ();
 		materials[1] = meshRend.material;
-	}
+		rb	= GetComponent<Rigidbody>();
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+//		bulletForce [0] = 0.0F;
+//		bulletForce [1] = 1.0F;
 	}
 
 	void OnCollisionEnter (Collision other) {
 		if (other.transform.CompareTag ("Bullet01")) {
-			Debug.Log ("Hit by bullet");
 			StartCoroutine (HitFlash());
+			Vector3 moveDirection = rb.position - other.transform.position;
+			rb.MovePosition (rb.position + moveDirection * bulletForce[1] * GameManager.instance.deltaTime);
 		}
 	}
 
 	IEnumerator HitFlash(){
-		Debug.Log ("Assigning material 1");
 		meshRend.material = materials [0];
+		GameManager.instance.deltaTimeScalar = hitTimeScale;
 		yield return new WaitForSeconds (flashPeriod);
-		Debug.Log ("Assigning material 0");
+		GameManager.instance.deltaTimeScalar = 1.0F;
 		meshRend.material = materials [1];
 	}
 }

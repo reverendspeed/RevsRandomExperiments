@@ -4,10 +4,10 @@ using System.Collections;
 public class CharacterMotorThirdP : MonoBehaviour {
 
 	private	Vector3			moveInput; // Store input so char doesn't reset orientation each update
-	public	float			moveForce			= 4.0F;
+	public	float			moveForce		= 4.0F;
 
 	private	bool			isJumping;
-	public 	float			jumpForce			= 5.0F;
+	public 	float			jumpForce		= 5.0F;
 	public	float			isGroundedDistance	= 0.32F;
 	private	Vector3			trailingPlayerFeet; // Vec3 that trails player, provides jump forgiveness
 	public	float			trailingPlayerFeetSpeed	= 4.0F;

@@ -38,7 +38,7 @@ public class PlasmaBall : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-		rb.MovePosition (rb.position + transform.forward * Time.deltaTime * speed);
+		rb.MovePosition (rb.position + transform.forward * GameManager.instance.deltaTime * speed);
 	}
 
 	void OnCollisionEnter(Collision other){

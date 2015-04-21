@@ -17,11 +17,12 @@ public class CabinetObliqueCam : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		transform.position = Vector3.Lerp(transform.position,
-		                                  cameraOffset + (playerTransform.position + playerTransform.forward * playerLookAhead),
-		                                  cameraMoveSpeed * Time.deltaTime);
-		transform.rotation = Quaternion.Slerp(transform.rotation, 
-		                                      Quaternion.LookRotation ((playerTransform.position + playerTransform.forward * playerLookAhead) - transform.position),
-		                                      cameraRotSpeed * Time.deltaTime);
+		Vector3 moveTargetForCam	= cameraOffset + (playerTransform.position + playerTransform.forward * playerLookAhead);
+
+		transform.position = Vector3.Lerp(transform.position, moveTargetForCam, cameraMoveSpeed * GameManager.instance.deltaTime);
+
+		Quaternion lookTargetForCam = Quaternion.LookRotation ((playerTransform.position + playerTransform.forward * playerLookAhead) - transform.position);
+
+		transform.rotation = Quaternion.Slerp(transform.rotation, lookTargetForCam, cameraRotSpeed * GameManager.instance.deltaTime);
 	}
 }
